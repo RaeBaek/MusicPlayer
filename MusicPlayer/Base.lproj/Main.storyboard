@@ -16,39 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiH-Jx-ING">
-                                <rect key="frame" x="91" y="207" width="211" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-Ct-Thi">
+                                <rect key="frame" x="96.666666666666686" y="159" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="CbX-pd-6DT"/>
+                                    <constraint firstAttribute="width" constant="200" id="byT-yz-OJV"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="button_play"/>
                                 <state key="selected" image="button_pause"/>
                                 <connections>
-                                    <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhh-53-8xx"/>
+                                    <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcC-UY-pBb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyD-0v-FxF">
-                                <rect key="frame" x="158" y="455" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-i2-yiE">
+                                <rect key="frame" x="158.66666666666666" y="379" width="76" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bQN-fb-iI4">
-                                <rect key="frame" x="34" y="502" width="330" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-2z-5gw">
+                                <rect key="frame" x="18" y="420" width="357" height="31"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yqR-lE-tBe"/>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="t1x-dd-SYD"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CH9-2z-5gw" secondAttribute="trailing" constant="20" id="4xn-dg-Sdv"/>
+                            <constraint firstItem="Sb1-i2-yiE" firstAttribute="top" secondItem="vP6-Ct-Thi" secondAttribute="bottom" constant="20" id="Csa-mw-HBg"/>
+                            <constraint firstItem="vP6-Ct-Thi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xsq-GF-ipy"/>
+                            <constraint firstItem="CH9-2z-5gw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDl-WJ-Fsc"/>
+                            <constraint firstItem="CH9-2z-5gw" firstAttribute="top" secondItem="Sb1-i2-yiE" secondAttribute="bottom" constant="20" id="fBT-we-PWg"/>
+                            <constraint firstItem="Sb1-i2-yiE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m4f-Kt-oLf"/>
+                            <constraint firstItem="vP6-Ct-Thi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="q6p-T5-fMZ"/>
+                            <constraint firstItem="CH9-2z-5gw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wKk-Sg-yZR"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="playPauseButton" destination="IiH-Jx-ING" id="Tlo-cu-KzR"/>
-                        <outlet property="progressSlider" destination="bQN-fb-iI4" id="S8l-j0-uaX"/>
-                        <outlet property="timeLabel" destination="oyD-0v-FxF" id="Zdj-oc-69F"/>
+                        <outlet property="playPauseButton" destination="vP6-Ct-Thi" id="3Xt-jT-UaW"/>
+                        <outlet property="progressSlider" destination="CH9-2z-5gw" id="opU-qi-DP0"/>
+                        <outlet property="timeLabel" destination="Sb1-i2-yiE" id="W5F-Ab-pcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
